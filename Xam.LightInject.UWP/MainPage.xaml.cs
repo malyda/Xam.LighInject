@@ -21,7 +21,7 @@ namespace Xam.LighInject.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Xam.LighInject.App());
+            LoadApplication(new Xam.LighInject.UWP.AppUWP());
         }
     }
 }
