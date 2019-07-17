@@ -8,6 +8,6 @@ namespace Xam.LightInject.Service.CrossplatformServices
     public interface IDeviceIdentification
     {
         string GetIMEI();
-        string GetSerialNumber();
+        string GetHardwareID();
     }
 }

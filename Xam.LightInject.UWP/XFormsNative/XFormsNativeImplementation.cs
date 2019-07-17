@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics;
-using Xam.LighInject.Service.XFormsNative;
-using Xam.LighInject.UWP.XFormsNative;
+using Xam.LightInject.Service.XFormsNative;
+using Xam.LightInject.UWP.XFormsNative;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(XFormsNativeImplementation))]
-namespace Xam.LighInject.UWP.XFormsNative
+namespace Xam.LightInject.UWP.XFormsNative
 {
     class XFormsNativeImplementation : IXFormsNative
     {

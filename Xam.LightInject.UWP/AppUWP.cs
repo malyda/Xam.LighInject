@@ -1,14 +1,14 @@
-﻿using LightInject;
-using Xam.LighInject.Service.CrossplatformServices;
-using Xam.LighInject.UWP.CrossplatformService;
+﻿using Xam.LightInject.Service.CrossplatformServices;
+using Xam.LightInject.UWP.CrossplatformService;
 
-namespace Xam.LighInject.UWP
+namespace Xam.LightInject.UWP
 {
-    public class AppUWP : LighInject.App
+    public class AppUWP : LightInject.App
     {
         public AppUWP()
         {
             RegisterService(typeof(ICrossplatformService), typeof(CrossplatformServiceImplementation));
+            RegisterService(typeof(IDeviceIdentification), typeof(DeviceIdentificationImplementation));
         }
     }
 }

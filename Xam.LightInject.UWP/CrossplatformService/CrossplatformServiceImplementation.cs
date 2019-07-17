@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
-using Xam.LighInject.Service.CrossplatformServices;
+using Xam.LightInject.Service.CrossplatformServices;
 
-namespace Xam.LighInject.UWP.CrossplatformService
+namespace Xam.LightInject.UWP.CrossplatformService
 {
     public class CrossplatformServiceImplementation : ICrossplatformService
     {

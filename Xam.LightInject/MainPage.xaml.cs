@@ -45,7 +45,7 @@ namespace Xam.LightInject
 
             if (status == PermissionStatus.Granted)
             {
-                Debug.WriteLine(deviceIdentification.GetSerialNumber());
+                Debug.WriteLine(deviceIdentification.GetHardwareID());
             }
             else if (status != PermissionStatus.Unknown)
             {

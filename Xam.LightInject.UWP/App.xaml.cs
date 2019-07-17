@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Xam.LighInject.UWP
+namespace Xam.LightInject.UWP
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.

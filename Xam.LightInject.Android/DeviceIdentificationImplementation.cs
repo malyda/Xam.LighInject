@@ -11,7 +11,7 @@ namespace Xam.LightInject.Droid
             return identification;
         }
 
-        public string GetSerialNumber()
+        public string GetHardwareID()
         {
             if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
             {
