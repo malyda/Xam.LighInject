@@ -6,6 +6,7 @@ using Plugin.Permissions.Abstractions;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Xam.LightInject.Service;
 using Xam.LightInject.Service.CrossplatformServices;
 using Xamarin.Forms;
 
@@ -16,11 +17,9 @@ namespace Xam.LightInject
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        ServiceContainer container;
-        public MainPage(ServiceContainer container)
+        public MainPage()
         {
             InitializeComponent();
-            this.container = container;
         }
 
         protected override async void OnAppearing()
@@ -31,7 +30,7 @@ namespace Xam.LightInject
 
         public async Task LogDeviceIdetification()
         {
-            var deviceIdentification = container.GetInstance<IDeviceIdentification>();
+            var deviceIdentification = ServiceLocator.GetInstance<IDeviceIdentification>();
             Debug.WriteLine(deviceIdentification.GetIMEI());
 
             var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);

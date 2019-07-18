@@ -6,6 +6,6 @@
              mc:Ignorable="d"
              x:Class="Xam.LightInject.App">
     <Application.Resources>
-
+       
     </Application.Resources>
 </Application>

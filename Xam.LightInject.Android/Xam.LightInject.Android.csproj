@@ -78,14 +78,12 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AndroidCompositeRoot.cs" />
-    <Compile Include="AppAndroid.cs" />
-    <Compile Include="CrossplatformService\CrossplatformServiceImplementation.cs" />
-    <Compile Include="DeviceIdentificationImplementation.cs" />
+    <Compile Include="Service\CrossplatformService\CrossplatformServiceImplementation.cs" />
+    <Compile Include="Service\DeviceIdentificationImplementation.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XFormsNative\XFormsNativeImplementation.cs" />
+    <Compile Include="Service\XFormsNative\XFormsNativeImplementation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

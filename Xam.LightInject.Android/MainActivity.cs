@@ -4,6 +4,10 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Plugin.Permissions;
+using Xam.LightInject.Service;
+using Xam.LightInject.Service.CrossplatformServices;
+using Xam.LighInject.Droid.Service.CrossplatformService;
+using Xam.LighInject.Droid.Service;
 
 namespace Xam.LightInject.Droid
 {
@@ -20,7 +24,11 @@ namespace Xam.LightInject.Droid
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new AppAndroid());
+
+            RegisterServices();
+           
+
+            LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -28,6 +36,12 @@ namespace Xam.LightInject.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        public void RegisterServices()
+        {
+            ServiceLocator.RegisterAsSingleton<ICrossplatformService, CrossplatformServiceImplementation>();
+            ServiceLocator.RegisterAsSingleton<IDeviceIdentification, DeviceIdentificationImplementation>();
         }
     }
 }

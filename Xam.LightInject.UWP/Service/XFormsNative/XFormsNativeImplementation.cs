@@ -1,16 +1,16 @@
 ﻿using System.Diagnostics;
-using Xam.LightInject.Droid.XFormsNative;
+using Xam.LighInject.UWP.Service.XFormsNative;
 using Xam.LightInject.Service.XFormsNative;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(XFormsNativeImplementation))]
-namespace Xam.LightInject.Droid.XFormsNative
+namespace Xam.LighInject.UWP.Service.XFormsNative
 {
     class XFormsNativeImplementation : IXFormsNative
     {
         public void DoSomethingXFormsNative()
         {
-            Debug.WriteLine("XFormsNative service DoSomethingXFormsNative method called in Android.");
+            Debug.WriteLine("XFormsNative service DoSomethingXFormsNative method called in UWP.");
         }
     }
 }

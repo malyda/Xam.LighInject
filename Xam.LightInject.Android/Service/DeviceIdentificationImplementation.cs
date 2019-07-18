@@ -1,7 +1,7 @@
 ﻿using Android.OS;
 using Xam.LightInject.Service.CrossplatformServices;
 
-namespace Xam.LightInject.Droid
+namespace Xam.LighInject.Droid.Service
 {
     class DeviceIdentificationImplementation : IDeviceIdentification
     {

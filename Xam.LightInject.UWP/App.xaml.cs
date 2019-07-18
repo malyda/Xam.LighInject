@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Xam.LighInject.UWP.Service.CrossplatformService;
+using Xam.LightInject.Service;
+using Xam.LightInject.Service.CrossplatformServices;
 
 namespace Xam.LightInject.UWP
 {
@@ -29,6 +32,7 @@ namespace Xam.LightInject.UWP
         public App()
         {
             this.InitializeComponent();
+            RegisterServices();
             this.Suspending += OnSuspending;
         }
 
@@ -96,6 +100,13 @@ namespace Xam.LightInject.UWP
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+
+        public void RegisterServices()
+        {
+            ServiceLocator.RegisterAsSingleton<ICrossplatformService, CrossplatformServiceImplementation>();
+            ServiceLocator.RegisterAsSingleton<IDeviceIdentification, DeviceIdentificationImplementation>();
         }
     }
 }

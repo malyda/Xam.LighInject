@@ -6,7 +6,7 @@
         {
             this.InitializeComponent();
 
-            LoadApplication(new AppUWP());
+            LoadApplication(new LightInject.App());
         }
     }
 }

@@ -92,15 +92,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AppUWP.cs" />
-    <Compile Include="CrossplatformService\CrossplatformServiceImplementation.cs" />
-    <Compile Include="DeviceIdentificationImplementation.cs" />
+    <Compile Include="Service\CrossplatformService\CrossplatformServiceImplementation.cs" />
+    <Compile Include="Service\DeviceIdentificationImplementation.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UWPCompositeRoot.cs" />
-    <Compile Include="XFormsNative\XFormsNativeImplementation.cs" />
+    <Compile Include="Service\XFormsNative\XFormsNativeImplementation.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
